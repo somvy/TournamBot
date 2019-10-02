@@ -66,6 +66,21 @@ class VkBot:
             self.pm.add_ratio(self.user_to_choose_2[1])
         return self.show_new_people()
 
+    def get_users(self):
+        res = []
+        j = 1
+
+        for i in self.pm.get_all():
+            prom = []
+            prom.append(str(j))
+            prom.append(f'https://vk.com/id{i[1]}')
+            prom.append(i[2])
+            prom.append('Solo' if i[5]=='5' else 'Team')
+            j += 1
+            res.append(prom)
+        message = '\n'.join([' '.join(i) for i in res])
+        return message
+
     def greetings(self, message):
         answer_main = {
             'user_id': self.USER_ID,
@@ -73,6 +88,12 @@ class VkBot:
             'random_id': random.randint(1, 1000000),
             'keyboard': json.dumps(keyboard_dict_first_dialog_1, ensure_ascii=False)}
         print(self.register_steps)
+
+        if message == 'get_users':
+            answer = answer_main.copy()
+            answer['message'] = self.get_users()
+            return answer
+
 
         if self.register_steps == 0:
             self.pm.set_step(self.USER_ID, '1')
