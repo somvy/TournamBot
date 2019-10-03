@@ -1,116 +1,3 @@
-keyboard_dict_test = {
-    "one_time": None,
-    "buttons": [
-      [{
-        "action": {
-          "type": "text",
-          "payload": "{\"button\": \"1\"}",
-          "label": "Погода"
-        },
-        "color": "negative"
-      },
-     {
-        "action": {
-          "type": "text",
-          "payload": "{\"button\": \"2\"}",
-          "label": "Время"
-        },
-        "color": "positive"
-      }],
-      [{
-        "action": {
-          "type": "text",
-          "payload": "{\"button\": \"3\"}",
-          "label": "Привет"
-        },
-        "color": "default"
-      },
-     {
-        "action": {
-          "type": "text",
-          "payload": "{\"button\": \"4\"}",
-          "label": "Пока"
-        },
-        "color": "primary"
-      }]
-    ]
-  }
-
-keyboard_dict_main = {
-    "one_time": None,
-    "buttons": [
-      [{
-        "action": {
-          "type": "text",
-          "payload": "{\"button\": \"1\"}",
-          "label": "1"
-        },
-        "color": "primary"
-      },
-     {
-        "action": {
-          "type": "text",
-          "payload": "{\"button\": \"2\"}",
-          "label": "2"
-        },
-        "color": "primary"
-      }],
-      [{
-        "action": {
-          "type": "text",
-          "payload": "{\"button\": \"3\"}",
-          "label": "Пропуск"
-        },
-        "color": "default"
-      }],[
-     {
-        "action": {
-          "type": "text",
-          "payload": "{\"button\": \"4\"}",
-          "label": "Кто это?"
-        },
-        "color": "positive"
-      }]
-    ]
-  }
-
-keyboard_dict = {
-    "one_time": None,
-    "buttons": [
-      [{
-        "action": {
-          "type": "text",
-          "payload": "{\"button\": \"1\"}",
-          "label": "Погода"
-        },
-        "color": "negative"
-      },
-     {
-        "action": {
-          "type": "text",
-          "payload": "{\"button\": \"2\"}",
-          "label": "Время"
-        },
-        "color": "positive"
-      }],
-      [{
-        "action": {
-          "type": "text",
-          "payload": "{\"button\": \"3\"}",
-          "label": "Привет"
-        },
-        "color": "default"
-      },
-     {
-        "action": {
-          "type": "text",
-          "payload": "{\"button\": \"4\"}",
-          "label": "Пока"
-        },
-        "color": "primary"
-      }]
-    ]
-  }
 #reg_st=1
 keyboard_dict_first_dialog_1 = {
     "one_time": None,
@@ -192,25 +79,37 @@ keyboard_dict_thanks = {
     ]
   }
 
-keyboard_dict_ok = {
+keyboard_dict_last_solo = {
     "one_time": None,
     "buttons": [
       [{
         "action": {
           "type": "text",
           "payload": "{\"button\": \"1\"}",
-          "label": "А, ок."
+          "label": "Изменить статус участника"
         },
         "color": "primary"
-      },
+      }],
+      [
      {
         "action": {
           "type": "text",
           "payload": "{\"button\": \"2\"}",
-          "label": "Понимаю"
+          "label": "Отменить регистрацию в турнире"
         },
-        "color": "primary"
-      }]
+        "color": "negative"
+      }],
+      [
+      {
+        "action": {
+            "type": "text",
+            "payload": "{\"button\": \"3\"}",
+            "label": "Беседа для solo игроков"
+                  },
+        "color": "positive"
+
+      }
+      ]
     ]
   }
   
@@ -224,6 +123,101 @@ keyboard_dict_noth = {
           "label": "😉"
         },
         "color": "positive"
+      }]
+    ]
+  }
+
+keyboard_dict_first_dialog_ok = {
+    "one_time": None,
+    "buttons": [
+      [{
+        "action": {
+          "type": "text",
+          "payload": "{\"button\": \"1\"}",
+          "label": "1"
+        },
+        "color": "primary"
+      },
+     {
+        "action": {
+          "type": "text",
+          "payload": "{\"button\": \"2\"}",
+          "label": "2"
+        },
+        "color": "primary"
+      }]
+    ]
+  }
+
+keyboard_dict_last_team = {
+    "one_time": None,
+    "buttons": [
+      [
+      {
+        "action": {
+          "type": "text",
+          "payload": "{\"button\": \"1\"}",
+          "label": "Изменить статус участника"
+        },
+        "color": "primary"
+       }
+      ],
+      [
+       {
+        "action": {
+          "type": "text",
+          "payload": "{\"button\": \"2\"}",
+          "label": "Отменить регистрацию в турнире"
+        },
+        "color": "negative"
+       }
+      ]
+    ]
+  }
+  
+keyboard_dict_ausure = {
+    "one_time": None,
+    "buttons": [
+      [
+      {
+        "action": {
+          "type": "text",
+          "payload": "{\"button\": \"1\"}",
+          "label": "Нет"
+        },
+        "color": "positive"
+       }
+      ],
+      [
+       {
+        "action": {
+          "type": "text",
+          "payload": "{\"button\": \"2\"}",
+          "label": "Да"
+        },
+        "color": "negative"
+       }
+      ]
+    ]
+  }
+keyboard_dict_ok = {
+    "one_time": None,
+    "buttons": [
+      [{
+        "action": {
+          "type": "text",
+          "payload": "{\"button\": \"1\"}",
+          "label": "Хорошо"
+        },
+        "color": "positive"
+      },
+     {
+        "action": {
+          "type": "text",
+          "payload": "{\"button\": \"2\"}",
+          "label": "Ладно"
+        },
+        "color": "negative"
       }]
     ]
   }
